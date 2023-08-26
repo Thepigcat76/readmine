@@ -68,7 +68,7 @@ fn main() {
     println!("Please enter the README file path or root-directory path\nor leave empty if correct root-dir is already selected");
     let path_str = msg_input(cur_dir.to_str().expect("Failed to unwrap"));
     let mut file = open(&path_str);
-    println!("Enter the content table. Seperate entries with COMMA");
+    println!("Enter the content table. Seperate entries with COMMA.\nEnter __default__ to use the default Layout");
     let content_table_raw = msg_input(">> ");
     let content_table = convert_string_to_vec(&content_table_raw);
     println!("Enter contributors. Leave empty to skip this step");
